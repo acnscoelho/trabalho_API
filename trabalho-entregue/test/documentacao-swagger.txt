@@ -1,0 +1,140 @@
+API de CRUD para testes automatizados
+
+Documentação da API de CRUD para testes automatizados
+
+Conteudos API para gerenciamento de conteúdos
+
+1) GET/conteudos - Retorna a lista de todos os conteúdos
+1.1) Não há parametros
+1.2) Status Code: 200
+1.3) Request URL: http://localhost:3000/conteudos
+1.4) Exemplo Value - Schema
+[
+  {
+    "id": "string",
+    "titulo": "string",
+    "descricao": "string",
+    "tipoConteudo": "string",
+    "conteudo": "string",
+    "dataCadastro": "2024-07-22T00:27:35.273Z"
+  }
+]
+1.5) Response body
+[
+  {
+    "id": 1,
+    "titulo": "Teste API",
+    "descricao": "Teste API",
+    "tipoConteudo": "Teste de Unidade",
+    "conteudo": "Teste API",
+    "dataCadastro": "2024-07-22T00:26:43.561Z"
+  }
+]
+
+2) POST/conteudos - Cria um novo conteúdo
+2.1) Não há parametros 
+2.2) O preenchimento do body é obrigatório, mas os campos id e dataCadastro não precisam ser informados
+2.3) Status Code: 422 (Error: Unprocessable Entity) - Esse erro ocorreu porque foram informados os campos: id e dataCastrado
+2.4) Status Code: 201 (Conteúdo criado com sucesso)
+2.5) Request URL: http://localhost:3000/conteudos
+2.6) Para realizar o cadastro do conteúdo e ter o Status Code: 201, os campos: id e dataCadastro deverão ser retirados do body
+Request Body
+{
+  "titulo": "Trabalho API",
+  "descricao": "Cadastro de usuário",
+  "tipoConteudo": "Teste Unitário",
+  "conteudo": "Teste"
+}
+
+Retorno Status Code: 201 (Conteúdo criado com sucesso) sem os campos: id e dataCadastro
+Response body
+{
+  "id": 2,
+  "titulo": "Trabalho API",
+  "descricao": "Cadastro de usuário",
+  "tipoConteudo": "Teste Unitário",
+  "conteudo": "Teste",
+  "dataCadastro": "2024-07-22T00:39:54.047Z"
+}
+
+3) GET/conteudos/{id} - Retorna um conteúdo pelo id
+3.1) Deverá informar o ID do coneteúdo (parametro)
+3.2) Request URL http://localhost:3000/conteudos/1
+3.3) Status Code: 200 (Conteúdo encontrado)
+3.4) Status Code: 404 (Conteúdo não encontrado)
+3.5) Exemplo Value - Schema
+{
+  "id": "string",
+  "titulo": "string",
+  "descricao": "string",
+  "tipoConteudo": "string",
+  "conteudo": "string",
+  "dataCadastro": "2024-07-22T00:51:00.602Z"
+}
+3.6) Response body
+{
+  "id": 1,
+  "titulo": "Teste API",
+  "descricao": "Teste API",
+  "tipoConteudo": "Teste de Unidade",
+  "conteudo": "Teste API",
+  "dataCadastro": "2024-07-22T00:26:43.561Z"
+}
+
+4) DELETE/conteudos/{id} - Remove um conteúdo pelo ID
+4.1) Deverá informar o ID do coneteúdo (parametro)
+4.2) Request URL: http://localhost:3000/conteudos/3
+4.3) Status Code: 404 (Conteúdo não encontrado)
+4.4) Status Code: 200 (Conteúdo removido com sucesso)
+4.5) Quando não encontra o ID para ser excluído
+Response body
+{
+  "error": "Erro ao excluir o conteúdo, o conteúdo não foi encontrado."
+}
+
+4.6) Contéudo excluído
+Response body
+{
+  "message": "O conteúdo foi removido com sucesso!"
+}
+
+5) PUT/conteudos/{id} - Atualiza um conteúdo pelo ID
+5.1) Deverá informar o ID do coneteúdo (parametro)
+5.2) Request URL: http://localhost:3000/conteudos/3
+5.3) O preenchimento do body é obrigatório, mas os campos id e dataCadastro não precisam ser informados
+5.4) Status Code: 422 (Error: Unprocessable Entity) - Esse erro ocorreu porque foram informados os campos: id e dataCastrado
+5.5) Para atualizar o conteúdo e ter o Status Code: 201 (Conteúdo atualizado com sucesso), os campos: id e dataCadastro deverão ser retirados do body
+Request URL: http://localhost:3000/conteudos/1
+Parameters: 1
+
+Request body
+{
+  "titulo": "Teste API",
+  "descricao": "Teste API",
+  "tipoConteudo": "Teste de Unidade",
+  "conteudo": "Teste API"
+}
+
+Response body
+{
+  "id": 1,
+  "titulo": "Teste API",
+  "descricao": "Teste API",
+  "tipoConteudo": "Teste de Unidade",
+  "conteudo": "Teste API"
+}
+
+5.6) Quando tentamos realizar uma atualização de um conteúdo que não existe, o Status Code será 404 (Conteúdo não encontrado)
+Parameters: 3
+
+Request body
+{
+  "titulo": "Teste",
+  "descricao": "Teste",
+  "tipoConteudo": "Teste",
+  "conteudo": "Teste"
+}
+Response body
+{
+  "error": "O contedúdo que você está tentando alterar não existe na base de dados. ID INFORMADO: 3"
+}

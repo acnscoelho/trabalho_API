@@ -1,0 +1,165 @@
+{
+  "numFailedTestSuites": 0,
+  "numFailedTests": 0,
+  "numPassedTestSuites": 2,
+  "numPassedTests": 5,
+  "numPendingTestSuites": 0,
+  "numPendingTests": 0,
+  "numRuntimeErrorTestSuites": 0,
+  "numTodoTests": 0,
+  "numTotalTestSuites": 2,
+  "numTotalTests": 5,
+  "openHandles": [],
+  "snapshot": {
+    "added": 0,
+    "didUpdate": false,
+    "failure": false,
+    "filesAdded": 0,
+    "filesRemoved": 0,
+    "filesRemovedList": [],
+    "filesUnmatched": 0,
+    "filesUpdated": 0,
+    "matched": 0,
+    "total": 0,
+    "unchecked": 0,
+    "uncheckedKeysByFile": [],
+    "unmatched": 0,
+    "updated": 0
+  },
+  "startTime": 1730154715480,
+  "success": false,
+  "testResults": [
+    {
+      "leaks": false,
+      "numFailingTests": 0,
+      "numPassingTests": 3,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 1730154720167,
+        "runtime": 4309,
+        "slow": false,
+        "start": 1730154715858
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "uncheckedKeys": [],
+        "unmatched": 0,
+        "updated": 0
+      },
+      "testFilePath": "C:\\Trabalho_API\\trabalho-entregue\\test\\conteudo\\crud-conteudo.test.js",
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "Descrição da suíte de testes crud (post, get, put, delete CONTEUDOS)"
+          ],
+          "duration": 13,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Descrição da suíte de testes crud (post, get, put, delete CONTEUDOS) Test 02: deve consultar o registro cadastrado anteriormente, e validar resultado e statusCode",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 4,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "Test 02: deve consultar o registro cadastrado anteriormente, e validar resultado e statusCode"
+        },
+        {
+          "ancestorTitles": [
+            "Descrição da suíte de testes crud (post, get, put, delete CONTEUDOS)"
+          ],
+          "duration": 23,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Descrição da suíte de testes crud (post, get, put, delete CONTEUDOS) Test 03: deve alterar o conteudo cadastrado anteriormente, e validar que os dados realmente foram alterados e validar statusCode",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 7,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "Test 03: deve alterar o conteudo cadastrado anteriormente, e validar que os dados realmente foram alterados e validar statusCode"
+        },
+        {
+          "ancestorTitles": [
+            "Descrição da suíte de testes crud (post, get, put, delete CONTEUDOS)"
+          ],
+          "duration": 21,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Descrição da suíte de testes crud (post, get, put, delete CONTEUDOS) Test 04: deve remover o registro cadastrado, e validar a consulta do registro para garantir sua remoção.",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "Test 04: deve remover o registro cadastrado, e validar a consulta do registro para garantir sua remoção."
+        }
+      ],
+      "failureMessage": null
+    },
+    {
+      "leaks": false,
+      "numFailingTests": 0,
+      "numPassingTests": 2,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 1730154720309,
+        "runtime": 4465,
+        "slow": false,
+        "start": 1730154715844
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "uncheckedKeys": [],
+        "unmatched": 0,
+        "updated": 0
+      },
+      "testFilePath": "C:\\Trabalho_API\\trabalho-entregue\\test\\users\\teste-integrado-users.test.js",
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "Suite de testes crud (post, get, put, delete USER)"
+          ],
+          "duration": 30,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Suite de testes crud (post, get, put, delete USER) Alterando o registro cadastrado anteriormente, e verificando se os dados realmente foram alterados.",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 9,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "Alterando o registro cadastrado anteriormente, e verificando se os dados realmente foram alterados."
+        },
+        {
+          "ancestorTitles": [
+            "Suite de testes crud (post, get, put, delete USER)"
+          ],
+          "duration": 42,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Suite de testes crud (post, get, put, delete USER) Deverá remover o registro cadastrado anteriormente. E retornar 204.",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "Deverá remover o registro cadastrado anteriormente. E retornar 204."
+        }
+      ],
+      "failureMessage": null
+    }
+  ],
+  "wasInterrupted": false
+}
